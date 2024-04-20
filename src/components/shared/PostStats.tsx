@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useDeleteSavedPost, useGetCurrentUser, useLikePost, useSavePost } from "@/lib/react-query/queriesAndMutations";
 import { checkIsLiked } from "@/lib/utils";
 import { Models } from "appwrite";
-import Loader from "./Loader";
 import { useTheme } from "@/context/ThemeContext";
 
 type PostStatsDisabledProps = {
@@ -43,27 +42,25 @@ type PostStatsProps = {
 
 const PostStats = ({ post, userId, disabled }: PostStatsProps) => {
   const { theme } = useTheme();
-  const [likes, setLikes] = useState<string[]>([]);
+  const likesList = post.likes.map((user: Models.Document) => user.$id);
+
+  const [likes, setLikes] = useState<string[]>(likesList);
   const [isSaved, setIsSaved] = useState(false);
 
   const { mutate: likePost } = useLikePost();
-  const { mutate: savePost, isPending: isSavingPost } = useSavePost();
-  const { mutate: deleteSavedPost, isPending: isDeletingSaved } = useDeleteSavedPost();
+  const { mutate: savePost } = useSavePost();
+  const { mutate: deleteSavedPost } = useDeleteSavedPost();
 
   const { data: currentUser } = useGetCurrentUser();
 
   const savedPostRecord = currentUser?.save.find((record: Models.Document) => record.post.$id === post?.$id);
 
   useEffect(() => {
-    const likesList = post?.likes?.map((user: Models.Document) => user.$id);
-    setLikes(likesList);
-
     setIsSaved(!!savedPostRecord);
   }, [post, currentUser]);
 
   const handleLikePost = (e: React.MouseEvent) => {
     e.stopPropagation();
-
     let likesArray = [...likes];
 
     if (likesArray.includes(userId)) {
@@ -101,7 +98,7 @@ const PostStats = ({ post, userId, disabled }: PostStatsProps) => {
               : "/assets/icons/like.png"
             }
             alt="like" title="Like" width={28} height={28}
-            onClick={(e) => handleLikePost(e)} className={`like-icon z-20 cursor-pointer ${checkIsLiked(likes, userId) ? 'svg-icon-liked' : (theme !== 'light' ? 'svg-icon' : 'svg-icon-black')}`}
+            onClick={handleLikePost} className={`like-icon z-20 cursor-pointer ${checkIsLiked(likes, userId) ? 'svg-icon-liked' : (theme !== 'light' ? 'svg-icon' : 'svg-icon-black')}`}
           />
         <p className="body-medium lg:base-medium">{likes.length}</p>
       </div>

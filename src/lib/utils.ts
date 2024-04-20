@@ -25,7 +25,7 @@ export function formatDateString(dateString: string) {
   return `${formattedDate} at ${time}`;
 }
 
-// 
+//
 export const multiFormatDateString = (timestamp: string = ""): string => {
   const timestampNum = Math.round(new Date(timestamp).getTime() / 1000);
   const date: Date = new Date(timestampNum * 1000);
@@ -58,6 +58,7 @@ export const multiFormatDateString = (timestamp: string = ""): string => {
 };
 
 export const checkIsLiked = (likeList: string[], userId: string) => {
+  console.log("LIKESLIST: ", likeList, userId);
   return likeList.includes(userId);
 };
 
@@ -66,8 +67,8 @@ export const formatFollowers = (followers: number) => {
     case followers < 10000:
       return followers;
     case followers < 1000000:
-      return `${(followers / 1000).toFixed()}K`;
+      return `${(followers / 1000)}K`;
     case followers < 1000000000:
-      return `${(followers / 1000000).toFixed()}M`;
+      return `${(followers / 1000000)}M`;
   }
 }

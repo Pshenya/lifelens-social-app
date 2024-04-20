@@ -49,13 +49,13 @@ const RightSidebar = ({ creators, posts, isUserLoading, isPostLoading }: RightSi
       )}
       <div className='footer'>
         <nav className='flex gap-2 px-2 small-normal text-light-4'>
-          <a href='#'>About</a>
+          <a href='https://github.com/Pshenya/lifelens-social-app' target='_blank'>About</a>
           <span>-</span>
-          <a href='#'>Help</a>
+          <a href={'https://www.linkedin.com/in/pavel-pshenyshniuk/'}>LinkedIn</a>
           <span>-</span>
-          <a href='#'>Contact us</a>
+          <a href='/assets/PAVEL_PSHENYSHNIUK_RESUME.pdf'>Resume</a>
           <span>-</span>
-          <a href='#'>Github repository</a>
+          <a href='#'>My Portfolio</a>
         </nav>
 
         <p className='small-normal text-light-4 px-2 py-5'>

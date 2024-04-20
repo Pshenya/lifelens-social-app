@@ -7,7 +7,8 @@ import RootWrapper from './_root/RootWrapper';
 import AuthWrapper from './_auth/AuthWrapper';
 import SignInForm from './_auth/forms/SignInForm';
 import SignUpForm from './_auth/forms/SignUpForm';
-import NotFoundPage from './components/shared/ErrorBoundary/NotFoundPage';
+import NotFoundPage from './components/shared/NotFoundPage';
+import UnderConstructionPage from './components/shared/UnderConstructionPage';
 
 import './globals.css'
 
@@ -34,6 +35,7 @@ const App = () => {
           <Route path='/profile/:id/*' element={<Profile />} />
           <Route path='/settings/*' element={<Settings />} />
         </Route>
+        <Route path="/under-construction" element={<UnderConstructionPage />} />
         <Route path="*" element={<NotFoundPage />} /> {/* This will match any route that hasn't been matched by the above routes */}
       </Routes>
       <Toaster />

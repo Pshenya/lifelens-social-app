@@ -33,13 +33,13 @@ const ActionModal = ({ isOpen, onClose, onConfirmDelete }: ActionModalProps) => 
             </h3>
             <div className="flex justify-center gap-4">
               <Button className='delete-btn' onClick={onDelayedClose}>
-                {isDeleting 
-                  ? 
+                {isDeleting
+                  ?
                     <>
                       <span className='flex mr-1'>
-                        Deleting... 
+                        Deleting...
                       </span>
-                      <Loader />
+                      <Loader lottie={false}/>
                     </>
                   : 'Delete'}
               </Button>
