@@ -14,7 +14,7 @@
     <img src="https://img.shields.io/badge/-Vite-black?style=for-the-badge&logoColor=white&logo=vite&color=656cf6" alt="vite" />
   </div>
 
-  👉 Live Demo: <a href="#" style="margin-top: 10px;">Live Demo</a>
+  <p style="margin-top: 10px;">👉 Live Demo: <a href="#">Live Demo</a></p>
 
   ---
 
