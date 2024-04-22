@@ -57,7 +57,7 @@ and many more, including code architecture and reusability.
 
 ## <a name="screenshots">📷 Screenshots of the App</a >
 
-<img src="">
+<img src="https://github.com/Pshenya/lifelens-social-app/blob/master/public/assets/images/lifelens-black-screenshots.png">
 
 <!-- ## <a name="quick-start">🤸 Quick Start</a>
 
