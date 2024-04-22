@@ -49,13 +49,22 @@ const Explore = () => {
     );
 
   const shouldShowSearchResults = searchValue !== "";
-  const shouldShowPosts = !shouldShowSearchResults && 
+  const shouldShowPosts = !shouldShowSearchResults &&
       posts.pages.every((item) => item?.documents.length === 0);
 
   return (
     <div className="explore-container">
       <div className="explore-inner_container">
-        <h2 className="h3-bold md:h2-bold w-full">Search Posts</h2>
+        <div className='max-w-5xl flex-start gap-3 justify-start w-full'>
+          <img
+                src="/assets/icons/explore-no-fill.png"
+                alt="explore"
+                width={36}
+                height={36}
+                className={`${theme !== 'light' ? 'svg-icon' : 'svg-icon-black'}`}
+          />
+          <h2 className="h3-bold md:h2-bold w-full">Search Posts</h2>
+        </div>
         <div className="flex gap-1 px-4 w-full rounded-lg bg-dark-3">
           <img
             src="/assets/icons/search.svg"
@@ -104,7 +113,7 @@ const Explore = () => {
           posts.pages.map((item, index) => {
             // Sorting posts by likes
             item?.documents.sort((a, b) => b.likes.length - a.likes.length);
-            
+
             // Filtering posts with likes only
             const popularPosts = item?.documents.filter(post => post.likes.length > 0);
 

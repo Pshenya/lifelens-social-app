@@ -37,7 +37,7 @@ const ThemeProvider = ({ children }: ThemeProviderProps) => {
       document.documentElement.style.setProperty('--color-primary-600', '#E470B9');
       document.documentElement.style.setProperty('--color-primary-700', '#D85EAB');
       document.documentElement.style.setProperty('--color-secondary-500', '#3DA5E9');
-      document.documentElement.style.setProperty('--color-off-white', '#CBF5E6');
+      document.documentElement.style.setProperty('--color-off-white', '#18233B');
       document.documentElement.style.setProperty('--color-red', '#FF5252');
       document.documentElement.style.setProperty('--color-dark-1', '#071a33');
       document.documentElement.style.setProperty('--color-dark-2', '#071a33');
@@ -55,7 +55,7 @@ const ThemeProvider = ({ children }: ThemeProviderProps) => {
       document.documentElement.style.setProperty('--color-primary-600', '#E470B9');
       document.documentElement.style.setProperty('--color-primary-700', '#D85EAB');
       document.documentElement.style.setProperty('--color-secondary-500', '#3DA5E9');
-      document.documentElement.style.setProperty('--color-off-white', '#CBF5E6');
+      document.documentElement.style.setProperty('--color-off-white', '#181818');
       document.documentElement.style.setProperty('--color-red', '#FF5252');
       document.documentElement.style.setProperty('--color-dark-1', '#000000');
       document.documentElement.style.setProperty('--color-dark-2', '#000000');
@@ -73,11 +73,11 @@ const ThemeProvider = ({ children }: ThemeProviderProps) => {
       document.documentElement.style.setProperty('--color-primary-600', '#E470B9');
       document.documentElement.style.setProperty('--color-primary-700', '#D85EAB');
       document.documentElement.style.setProperty('--color-secondary-500', '#3DA5E9');
-      document.documentElement.style.setProperty('--color-off-white', '#CBF5E6');
+      document.documentElement.style.setProperty('--color-off-white', '#F0F7FF');
       document.documentElement.style.setProperty('--color-red', '#FF5252');
       document.documentElement.style.setProperty('--color-dark-1', '#FFFFFF');
       document.documentElement.style.setProperty('--color-dark-2', '#FFFFFF');
-      document.documentElement.style.setProperty('--color-dark-3', '#e9ebed');
+      document.documentElement.style.setProperty('--color-dark-3', '#F0F7FF');
       document.documentElement.style.setProperty('--color-dark-4', '#f4f8fb');
       document.documentElement.style.setProperty('--color-dark-5', '#D4DADD');
       document.documentElement.style.setProperty('--color-dark-6', '#D4DADD');

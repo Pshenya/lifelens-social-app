@@ -12,9 +12,11 @@ import { useToast } from "@/components/ui/use-toast"
 import { useSignInAccount } from '@/lib/react-query/queriesAndMutations';
 import { SigninValidation } from '@/lib/validations'
 import { useUserContext } from '@/context/AuthContext';
+import { useTheme } from '@/context/ThemeContext';
 
 
 const SignInForm = () => {
+  const { theme } = useTheme();
   const { toast } = useToast();
   const { checkAuthUser, isLoading: isUserLoading } = useUserContext();
   const navigate = useNavigate();
@@ -54,9 +56,9 @@ const SignInForm = () => {
   return (
     <Form {...form}>
       <div className="sm:w-420 flex-center flex-col">
-        <img src="/assets/images/logo.svg" alt="logo" />
+        <img src='/assets/images/logo-w-text.png' alt='logo' width={200} className={`${theme === 'light' && 'svg-icon-black'}`}/>
 
-        <h2 className="h3-bold md:h2-bold pt-5 sm:pt-12">Welcome to "FUCKING"!</h2>
+        <h2 className="h3-bold md:h2-bold pt-5 sm:pt-12">Welcome to "LifeLens"</h2>
         <p className="text-light-3 small-medium md:base-regular mt-2">Log in into your account, broski</p>
 
         <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-5 w-full mt-4">
@@ -95,7 +97,7 @@ const SignInForm = () => {
           </Button>
 
           <p className="text-small-regular text-light-3 text-center mt-2">
-            Don't have an account? 
+            Don't have an account?
             <Link to="/sign-up" className="text-primary-500 text-small-semibold ml-1">Sign up</Link>
           </p>
         </form>

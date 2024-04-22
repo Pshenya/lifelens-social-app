@@ -15,7 +15,7 @@ const UserStories = ({ user, currentUserId }: UserStoriesProps) => {
       <img
         src={user.imageUrl || "/assets/icons/profile-placeholder.svg"}
         alt="creator"
-        className={`border-2 ${theme === 'light' ? 'border-white' : 'border-black' } rounded-full size-[72px] md:size-14`}
+        className={`border-2 ${theme === 'light' ? 'border-white' : 'border-black' } rounded-full size-[72px] md:size-16`}
       />
       {user.$id === currentUserId && <img src="/assets/icons/plus.svg" alt="add" className="add-story" width={23} height={23}/>}
     </Link>

@@ -6,14 +6,14 @@ import { QueryProvider } from './lib/react-query/QueryProvider';
 
 import App from './App';
 import { ThemeProvider } from './context/ThemeContext';
-import WrappedErrorBoundary from './components/shared/ErrorBoundary/ErrorBoundary';
+import ErrorBoundary from './components/shared/ErrorBoundary/ErrorBoundary';
 
 import './globals.css';
 
 
 ReactDom.createRoot(document.getElementById('root')!).render(
     <BrowserRouter>
-        <WrappedErrorBoundary>
+        <ErrorBoundary>
             <QueryProvider>
                 <AuthProvider>
                     <ThemeProvider>
@@ -21,6 +21,6 @@ ReactDom.createRoot(document.getElementById('root')!).render(
                     </ThemeProvider>
                 </AuthProvider>
             </QueryProvider>
-        </WrappedErrorBoundary>
+        </ErrorBoundary>
     </BrowserRouter>
 )

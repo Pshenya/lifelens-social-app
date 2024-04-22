@@ -12,7 +12,7 @@ const AllUsers = () => {
 
   if (isErrorCreators) {
     toast({ title: "Something went wrong." });
-    
+
     return;
   }
 
@@ -21,11 +21,9 @@ const AllUsers = () => {
       <div className="user-container">
         <div className='flex gap-2 w-full max-w-5xl'>
           <img
-            src="/assets/icons/people.svg"
-            width={36}
-            height={36}
+            src="/assets/icons/people-no-fill.png"
             alt="edit"
-            className={`${theme !== 'light' ? 'svg-icon' : 'svg-icon-black'}`}
+            className={`${theme !== 'light' ? 'svg-icon' : 'svg-icon-black'} size-9`}
           />
           <h2 className="h3-bold md:h2-bold text-left w-full">All Users</h2>
         </div>

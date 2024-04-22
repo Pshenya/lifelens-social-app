@@ -4,7 +4,6 @@ import { INITIAL_USER, useUserContext } from '@/context/AuthContext';
 import { sidebarLinks } from '@/CONSTANTS';
 import { INavLink } from '@/types';
 import { SkeletonProfile } from './skeletons';
-import { Button } from '../ui/button'
 import ProfileDropdown from './ProfileDropdown';
 import { useTheme } from '@/context/ThemeContext';
 
@@ -15,7 +14,7 @@ const LeftSidebar = () => {
   const { user, isLoading, setUser, setIsAuthenticated } = useUserContext();
 
   const { mutate: signOut, isPending: isSigningOut } = useSignOutAccount();
-  
+
   const handleSignOut = async (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     e.preventDefault();
     signOut();
@@ -27,7 +26,7 @@ const LeftSidebar = () => {
   const links = [
     ...sidebarLinks,
     {
-      imgURL: "/assets/icons/profile.png",
+      imgURL: "/assets/icons/profile-",
       route: `/profile/${user.id}`,
       label: "Profile",
     },
@@ -37,7 +36,7 @@ const LeftSidebar = () => {
     <nav className="leftsidebar">
       <div className="flex flex-col px-6 py-4 ">
         <Link to='/' className='flex gap-3 items-center p-4'>
-          <img src='/assets/icons/x_logo.svg' alt='logo' className={`${theme !== 'light' ? 'svg-icon' : 'svg-icon-black'}`} width={24} height={24} />
+          <img src='/assets/images/logo-w-text.png' alt='logo' width={150} className={`${theme === 'light' && 'svg-icon-black'}`}/>
         </Link>
 
         <ul className='flex flex-col'>
@@ -47,7 +46,7 @@ const LeftSidebar = () => {
               <li key={link.label} className={`leftsidebar-link group body-medium ${isActive && 'body-bold text-primary-500'} `}>
                 <NavLink to={link.route}>
                   <div className='navlink w-fit flex gap-5 items-center p-4 rounded-xl pr-8'>
-                    <img src={link.imgURL} alt={link.label} width={24} height={24}
+                    <img src={`${isActive ? link.imgURL + 'fill.png' : link.imgURL + 'no-fill.png'}`} alt={link.label} width={24} height={24}
                         className={`group-hover:svg-icon-invert-white ${theme !== 'light' ? 'svg-icon' : 'svg-icon-black'}
                                     ${isActive && 'svg-icon-primary-500'}`} />
                     {link.label}

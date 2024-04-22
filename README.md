@@ -55,7 +55,11 @@
 
 and many more, including code architecture and reusability.
 
-## <a name="quick-start">🤸 Quick Start</a>
+## <a name="screenshots">📷 Screenshots of the App</a >
+
+<img src="">
+
+<!-- ## <a name="quick-start">🤸 Quick Start</a>
 
 Follow these steps to set up the project locally on your machine.
 
@@ -104,4 +108,4 @@ Replace the placeholder values with your actual Appwrite credentials. You can ob
 npm run dev
 ```
 
-Open [http://localhost:5173](http://localhost:5173) in your browser to view the project.
+Open [http://localhost:5173](http://localhost:5173) in your browser to view the project. -->

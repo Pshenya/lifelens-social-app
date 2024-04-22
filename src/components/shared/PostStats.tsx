@@ -23,8 +23,8 @@ const PostStatsDisabled = ({likes, isSaved}: PostStatsDisabledProps) => {
       <div className="flex gap-2">
         <img
           src={isSaved
-            ? "/assets/icons/saved.svg"
-            : "/assets/icons/bookmark.svg"
+            ? "/assets/icons/save-fill.png"
+            : "/assets/icons/save-no-fill.png"
           }
           alt="save" title="Save" width={24} height={24}
           className="svg-icon"
@@ -53,11 +53,11 @@ const PostStats = ({ post, userId, disabled }: PostStatsProps) => {
 
   const { data: currentUser } = useGetCurrentUser();
 
-  const savedPostRecord = currentUser?.save.find((record: Models.Document) => record.post.$id === post?.$id);
+  const savedPostRecord = currentUser?.save.find((record: Models.Document) => record.post.$id === post.$id);
 
   useEffect(() => {
     setIsSaved(!!savedPostRecord);
-  }, [post, currentUser]);
+  }, [currentUser]);
 
   const handleLikePost = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -105,11 +105,11 @@ const PostStats = ({ post, userId, disabled }: PostStatsProps) => {
       <div className="flex gap-2">
         <img
           src={isSaved
-            ? "/assets/icons/saved.svg"
-            : "/assets/icons/bookmark.svg"
+            ? "/assets/icons/save-fill.png"
+            : "/assets/icons/save-no-fill.png"
           }
           alt="save" title="Save" width={28} height={28}
-          onClick={(e) => handleSavePost(e)} className={`z-20 ${theme !== 'light' ? 'svg-icon' : 'svg-icon-black'} cursor-pointer`}
+          onClick={handleSavePost} className={`z-20 ${theme !== 'light' ? 'svg-icon' : 'svg-icon-black'} cursor-pointer`}
         />
       </div>
     </div>
