@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-      <img src="https://github.com/Pshenya/lifelens-social-app/blob/master/public/assets/images/logo-project-banner.png" alt="Project banner">
+      <img src="https://github.com/Pshenya/lifelens-social-app/blob/master/public/assets/images/logo-project.png" alt="Project banner">
   <br />
 
   <div>
