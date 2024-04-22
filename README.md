@@ -1,8 +1,6 @@
 <div align="center">
   <br />
-    <!-- <a href="https://youtu.be/_W3R2VwRyF4?feature=shared" target="_blank">
-      <img src="https://github.com/adrianhajdin/social_media_app/assets/151519281/be514a19-3cbb-48b7-9acd-2cf4d2e319c4" alt="Project Banner">
-    </a> -->
+      <img src="https://github.com/Pshenya/lifelens-social-app/blob/master/public/assets/images/logo-project-banner.png" alt="Project banner">
   <br />
 
   <div>
@@ -57,7 +55,7 @@ and many more, including code architecture and reusability.
 
 ## <a name="screenshots">📷 Screenshots of the App</a >
 
-<img src="https://github.com/Pshenya/lifelens-social-app/blob/master/public/assets/images/lifelens-black-screenshots.png">
+<img src="https://github.com/Pshenya/lifelens-social-app/blob/master/public/assets/images/lifelens-black-screenshots.png" alt="App screenshots">
 
 <!-- ## <a name="quick-start">🤸 Quick Start</a>
 
