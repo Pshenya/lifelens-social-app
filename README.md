@@ -14,7 +14,7 @@
 
   &nbsp;
 
-  👉 Live Demo: <a href="https://lifelens.vercel.app/sign-in">Live Demo</a>
+  👉 Live Demo: <a href="https://lifelens.vercel.app/">Live Demo</a>
 
   ---
 
