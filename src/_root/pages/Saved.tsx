@@ -19,7 +19,7 @@ const Saved = () => {
 
   return (
     <div className="saved-container">
-      <div className="flex gap-2 w-full max-w-5xl">
+      <div className="flex gap-2 p-6 w-full max-w-5xl">
         <img
           src="/assets/icons/save-no-fill.png"
           width={36}

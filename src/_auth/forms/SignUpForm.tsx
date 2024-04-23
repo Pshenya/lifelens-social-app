@@ -18,7 +18,7 @@ import { useTheme } from '@/context/ThemeContext';
 const SignUpForm = () => {
   const { theme } = useTheme();
   const { toast } = useToast();
-  const { checkAuthUser, isLoading: isUserLoading } = useUserContext();
+  const { checkAuthUser } = useUserContext();
   const navigate = useNavigate();
 
   const { mutateAsync: createUserAccount, isPending: isCreatingAccount } = useCreateUserAccount();
@@ -126,7 +126,7 @@ const SignUpForm = () => {
             )}
           />
           <Button type="submit" className="text-dark-1 shad-button_primary">
-            {isCreatingAccount ? (
+            {isCreatingAccount || isSigningIn ? (
             <div className="flex-center gap-2">
               <Loader lottie={false}/>  Loading...
             </div>

@@ -1,35 +1,5 @@
-import {
-  Cloud,
-  CreditCard,
-  Github,
-  Keyboard,
-  LifeBuoy,
-  LogOut,
-  Mail,
-  MessageSquare,
-  Plus,
-  PlusCircle,
-  Settings,
-  User,
-  UserPlus,
-  Users,
-} from "lucide-react"
-
-import { Button } from "@/components/ui/button"
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuGroup,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuPortal,
-  DropdownMenuSeparator,
-  DropdownMenuShortcut,
-  DropdownMenuSub,
-  DropdownMenuSubContent,
-  DropdownMenuSubTrigger,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu"
+import { LogOut, Settings } from "lucide-react"
+import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import Loader from "./Loader"
 import { Link } from "react-router-dom"
 import { useUserContext } from "@/context/AuthContext"
@@ -59,7 +29,7 @@ const ProfileDropdown = ({ handleSignOut, isSigningOut }: ProfileDropdownProps) 
               <p className="body-regular text-light-3">@{user.username}</p>
             </div>
           </div>
-          <img 
+          <img
             src="/assets/icons/dots.png"
             alt="options"
             className={`size-4 self-center ${theme !== 'light' ? 'svg-icon' : 'svg-icon-black'}`}
@@ -76,9 +46,9 @@ const ProfileDropdown = ({ handleSignOut, isSigningOut }: ProfileDropdownProps) 
               </span>
             </DropdownMenuItem>
           </Link>
-          <DropdownMenuItem 
-            onClick={handleSignOut} 
-            role="button" 
+          <DropdownMenuItem
+            onClick={handleSignOut}
+            role="button"
             tabIndex={0}
             className="cursor-pointer hover:bg-dark-5"
           >
@@ -91,7 +61,7 @@ const ProfileDropdown = ({ handleSignOut, isSigningOut }: ProfileDropdownProps) 
           </DropdownMenuItem>
         </DropdownMenuGroup>
       </DropdownMenuContent>
-    </DropdownMenu>      
+    </DropdownMenu>
   )
 }
 

@@ -1,5 +1,5 @@
 import {
-    useQuery, 
+    useQuery,
     useMutation,
     useQueryClient,
     useInfiniteQuery
@@ -116,7 +116,7 @@ export const useGetPostById = (postId: string) => {
     return useQuery({
         queryKey: [QUERY_KEYS.GET_POST_BY_ID, postId],
         queryFn: () => getPostById(postId),
-        enabled: !!postId, 
+        enabled: !!postId,
     });
 }
 
@@ -159,7 +159,7 @@ export const useGetPosts = () => {
         getNextPageParam: (lastPage) => {
             if(lastPage && lastPage.documents.length === 0) return null;
 
-            const lastId = lastPage.documents[lastPage?.documents.length - 1].$id;
+            const lastId = lastPage?.documents[lastPage?.documents.length - 1].$id;
 
             return lastId
         }

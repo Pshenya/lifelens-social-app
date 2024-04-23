@@ -13,7 +13,6 @@ export type SearchResultProps = {
 };
 
 const SearchResults = ({ isSearchFetching, searchedPosts }: SearchResultProps) => {
-  console.log("IS Search fetching", isSearchFetching);
   console.log("Searched posts", searchedPosts);
   if (isSearchFetching) {
     return <Loader />;
@@ -34,6 +33,7 @@ const Explore = () => {
   const [searchValue, setSearchValue] = useState("");
   const debouncedSearch = useDebounce(searchValue, 500);
   const { data: searchedPosts, isFetching: isSearchFetching } = useSearchPosts(debouncedSearch);
+  console.log("POSTS: ", posts);
 
   useEffect(() => {
     if (inView && !searchValue) {
@@ -63,7 +63,7 @@ const Explore = () => {
                 height={36}
                 className={`${theme !== 'light' ? 'svg-icon' : 'svg-icon-black'}`}
           />
-          <h2 className="h3-bold md:h2-bold w-full">Search Posts</h2>
+          <h2 className="h3-bold md:h2-bold w-full">Explore</h2>
         </div>
         <div className="flex gap-1 px-4 w-full rounded-lg bg-dark-3">
           <img
@@ -86,7 +86,7 @@ const Explore = () => {
         </div>
       </div>
 
-      <div className="flex-between w-full max-w-5xl mt-16 mb-7">
+      <div className="flex-between w-full max-w-5xl md:mt-16 md:mb-7 p-6">
         <h3 className="body-bold md:h3-bold">Popular Today</h3>
 
         <div className="flex-center gap-3 bg-dark-3 rounded-xl px-4 py-2 cursor-pointer">

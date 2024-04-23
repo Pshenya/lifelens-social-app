@@ -1,13 +1,11 @@
 import Lottie from 'lottie-react';
 import lottie_loader from '../../../public/assets/animations/lottie_loader.json'
-import { useTheme } from '@/context/ThemeContext';
 
 type LoaderProps = {
     lottie?: boolean;
 }
 
 const Loader = ({ lottie = true }: LoaderProps ) => {
-    const { theme } = useTheme();
     if (lottie) {
         return (
             <div className='flex-center w-full h-[100vh] md:h-full'>

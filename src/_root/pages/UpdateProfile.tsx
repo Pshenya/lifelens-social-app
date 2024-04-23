@@ -1,8 +1,6 @@
 import * as z from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useNavigate, useParams } from "react-router-dom";
-
 import {
   Form,
   FormField,
@@ -19,7 +17,6 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import ProfileUploader from "@/components/shared/ProfileUploader";
-import { Models } from "appwrite";
 import { useEffect, useState } from "react";
 
 export const ProfileValidation = z.object({

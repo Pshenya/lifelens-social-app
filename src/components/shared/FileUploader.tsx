@@ -29,21 +29,21 @@ const FileUploader = ({ fieldChange, mediaUrl }: FileUploaderProps) => {
             <input {...getInputProps()} className='cursor-pointer' />
             {fileUrl ? (
                 <>
-                    <div className='flex flex-1 justify-center w-full p-5 lg:p-10'>
+                    <div className='flex flex-1 justify-center p-4 w-full'>
                         <img src={fileUrl} alt="image" className='file_uploader-img'/>
                     </div>
                     <p className='file_uploader-label'>Click or drag photo to replace</p>
                 </>
             ) : (
                 <div className='file_uploader-box'>
-                    <img 
-                        src='/assets/icons/file-upload.svg'
-                        width={96}
-                        height={77}
+                    <img
+                        src='/assets/icons/file-upload.png'
+                        width={70}
+                        height={70}
                         alt='file-upload'
-                        className='svg-icon-light'
+                        className='svg-icon-primary-500 opacity-90'
                     />
-                    <h3 className='text-light-2 base-medium mb-2 mt-6'>Drag & drop your files here</h3>
+                    <h3 className='text-light-2 base-medium mb-2 mt-6'>Drag & drop your images here</h3>
                     <p className='text-light-4 small-regular mb-6 h3-bold'>SVG, PNG, JPEG</p>
 
                     <Button className='shad-button_dark_2'>
