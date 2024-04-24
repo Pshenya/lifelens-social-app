@@ -55,7 +55,6 @@ and many more, including code architecture and reusability.
 
 ## <a name="screenshots">📷 Screenshots of the App</a >
 <div align='center'>
-  <br>
   <h3 align='center'>Login Page 👇</h3>
   <img src="https://github.com/Pshenya/lifelens-social-app/blob/master/public/assets/images/previews/login.png" alt="Login">
   <br><br>
