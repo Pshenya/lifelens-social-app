@@ -54,8 +54,35 @@
 and many more, including code architecture and reusability.
 
 ## <a name="screenshots">📷 Screenshots of the App</a >
-
-<img src="https://github.com/Pshenya/lifelens-social-app/blob/master/public/assets/images/lifelens-black-screenshots.png" alt="App screenshots">
+<div align='center'>
+  <br>
+  <h3 align='center'>Login Page 👇</h3>
+  <img src="https://github.com/Pshenya/lifelens-social-app/blob/master/public/assets/images/previews/login.png" alt="Login">
+  <br><br>
+  <h3 align='center'>Home Page 👇</h3>
+  <img src="https://github.com/Pshenya/lifelens-social-app/blob/master/public/assets/images/previews/home.png" alt="Home">
+  <br><br>
+  <h3 align='center'>Profile Page 👇</h3>
+  <img src="https://github.com/Pshenya/lifelens-social-app/blob/master/public/assets/images/previews/profile.png" alt="Profile">
+  <br><br>
+  <h3 align='center'>Post Page 👇</h3>
+  <img src="https://github.com/Pshenya/lifelens-social-app/blob/master/public/assets/images/previews/post.png" alt="Post">
+  <br><br>
+  <h3 align='center'>Explore Page 👇</h3>
+  <img src="https://github.com/Pshenya/lifelens-social-app/blob/master/public/assets/images/previews/explore.png" alt="Explore">
+  <br><br>
+  <h3 align='center'>Create Page 👇</h3>
+  <img src="https://github.com/Pshenya/lifelens-social-app/blob/master/public/assets/images/previews/create.png" alt="Create">
+  <br><br>
+  <h3 align='center'>Settings/Edit profile Page 👇</h3>
+  <img src="https://github.com/Pshenya/lifelens-social-app/blob/master/public/assets/images/previews/settings.png" alt="Settings">
+  <br><br>
+  <h3 align='center'>Theme change Page 👇</h3>
+  <img src="https://github.com/Pshenya/lifelens-social-app/blob/master/public/assets/images/previews/theme.png" alt="Theme">
+  <br><br>
+  <h3 align='center'>Mobile view 👇</h3>
+  <img src="https://github.com/Pshenya/lifelens-social-app/blob/master/public/assets/images/mobile_preview.png" alt="Mobile preview">
+</div>
 
 <!-- ## <a name="quick-start">🤸 Quick Start</a>
 
